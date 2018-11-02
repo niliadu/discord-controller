@@ -1,0 +1,33 @@
+{
+  "name": "discord-controller",
+  "version": "1.0.0",
+  "description": "API to create channels and move users around them in Discord",
+  "main": "./build/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node bin/dev",
+    "clear": "rm -rf dist",
+    "build": "npm run clean && mkdir dist && babel src -s -d dist",
+    "production": "npm run build && node bin/production"
+  },
+  "keywords": [
+    "api",
+    "discrord",
+    "controller"
+  ],
+  "author": "Wilton Silva",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.1.2",
+    "@babel/core": "^7.1.2",
+    "@babel/polyfill": "^7.0.0",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/register": "^7.0.0",
+    "express": "^4.16.3"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "discord.js": "^11.4.2",
+    "dotenv": "^6.0.0"
+  }
+}
